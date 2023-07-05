@@ -21,6 +21,7 @@ describe('createExpense', () => {
 
         const mockSave = jest.fn().mockResolvedValueOnce('newExpense');
         jest.spyOn(Expense.prototype, 'save').mockImplementationOnce(mockSave);
+        
 
         await controller.createExpense(req, res, next);
 
